@@ -1,9 +1,15 @@
 <template>
   <div>
-    <PageHeader title="Bookmarks" description="รวมเว็บไซต์แนว IT, Linux, Tutorials และเว็บไซต์ที่อื่นๆ ที่น่าสนใจ" />
+    <PageHeader
+      title="Bookmarks"
+      description="รวมเว็บไซต์แนว IT, Linux, Tutorials และเว็บไซต์ที่อื่นๆ ที่น่าสนใจ"
+    />
     <section class="mt-6 flex flex-col flex-nowrap gap-3">
       <ClientOnly>
-        <div v-for="data in bookmarkItems?.data" :key="data.id">
+        <div
+          v-for="data in bookmarkItems?.data"
+          :key="data.id"
+        >
           <BookmarkItem :web-item="data.attributes" />
         </div>
         <template #fallback>
@@ -11,13 +17,19 @@
         </template>
       </ClientOnly>
     </section>
-    <section v-if="bookmarkItems?.meta" class="mt-5 flex justify-center gap-5">
+    <section
+      v-if="bookmarkItems?.meta"
+      class="mt-5 flex justify-center gap-5"
+    >
       <USelectMenu
         v-model="sortBy"
         :options="sortType"
       >
         <template #leading>
-          <UIcon v-if="sortBy.icon" :name="sortBy.icon" />
+          <UIcon
+            v-if="sortBy.icon"
+            :name="sortBy.icon"
+          />
         </template>
       </USelectMenu>
       <UPagination

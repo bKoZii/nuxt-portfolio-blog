@@ -16,7 +16,10 @@
     <USkeleton class="h-96 w-full" />
     <UDivider class="my-4" />
     <USkeleton class="h-12 w-full" />
-    <div v-for="a in 5" :key="a">
+    <div
+      v-for="a in 5"
+      :key="a"
+    >
       <USkeleton class="h-5 w-full" />
     </div>
   </div>

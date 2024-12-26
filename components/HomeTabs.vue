@@ -12,7 +12,8 @@
             inactive: 'hover:text-primary-500 dark:hover:text-primary-400 text-gray-900',
           },
         },
-      }">
+      }"
+    >
       <template #item="{ item }: { item: Item }">
         <UCard :ui="{ base: 'overflow-hidden' }">
           <template #header>

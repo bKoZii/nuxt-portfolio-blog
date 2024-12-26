@@ -1,19 +1,34 @@
 <template>
   <div>
-    <PageHeader :title="$t('whatsInMyBag.title')" :description="$t('whatsInMyBag.subtitle')" />
-    <div class="flex flex-col flex-nowrap gap-12 mt-10">
+    <PageHeader
+      :title="$t('whatsInMyBag.title')"
+      :description="$t('whatsInMyBag.subtitle')"
+    />
+    <div class="mt-10 flex flex-col flex-nowrap gap-12">
       <div>
-        <UDivider label="Hardware" class="mb-3" />
+        <UDivider
+          label="Hardware"
+          class="mb-3"
+        />
         <div class="flex flex-col gap-5">
-          <div v-for="data in hardwareList" :key="data.name">
+          <div
+            v-for="data in hardwareList"
+            :key="data.name"
+          >
             <WhatIsInMyBagItemContainer :data-input="[data]" />
           </div>
         </div>
       </div>
       <div>
-        <UDivider label="Software" class="mb-3" />
+        <UDivider
+          label="Software"
+          class="mb-3"
+        />
         <div class="flex flex-col gap-5">
-          <div v-for="sData in softwareInfo" :key="sData.name">
+          <div
+            v-for="sData in softwareInfo"
+            :key="sData.name"
+          >
             <WhatIsInMyBagItemContainer :data-input="[sData]" />
           </div>
         </div>

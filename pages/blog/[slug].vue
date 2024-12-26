@@ -6,11 +6,11 @@
           <BlogSlugHeader :blog-slug="blogSlug" />
           <UDivider class="my-3" />
           <section
-            class="prose prose-sm prose-neutral max-w-none font-sans tracking-tight md:prose-base dark:prose-invert prose-h1:mb-5 prose-h2:my-4 prose-code:prose-h3:border-dashed prose-code:prose-h3:font-semibold prose-pre:font-semibold prose-li:my-1 dark:prose-pre:border dark:prose-pre:border-neutral-800"
+            class="prose prose-sm prose-neutral md:prose-base dark:prose-invert prose-h1:mb-5 prose-h2:my-4 prose-code:prose-h3:border-dashed prose-code:prose-h3:font-semibold prose-pre:font-semibold prose-li:my-1 dark:prose-pre:border dark:prose-pre:border-neutral-800 max-w-none font-sans tracking-tight"
           >
-          <div v-if="blogSlug.content">
-            <MDC :value="blogSlug.content" />
-          </div>
+            <div v-if="blogSlug.content">
+              <MDC :value="blogSlug.content" />
+            </div>
           </section>
           <UCard :ui="{ base: 'not-prose', body: { padding: 'p-0 sm:p-3' } }">
             <section class="flex flex-col items-center justify-center space-y-2">
@@ -20,7 +20,7 @@
               <SocialShare
                 network="facebook"
                 :label="false"
-                class="h-7 w-7 rounded bg-blue-600 p-1 text-white"
+                class="size-7 rounded bg-blue-600 p-1 text-white"
               />
             </section>
           </UCard>

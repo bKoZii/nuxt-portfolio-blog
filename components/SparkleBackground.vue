@@ -3,8 +3,12 @@
   <div
     ref="containerRef"
     class="relative size-full overflow-hidden will-change-transform"
-    :style="{ background }">
-    <canvas ref="canvasRef" class="absolute inset-0 size-full" />
+    :style="{ background }"
+  >
+    <canvas
+      ref="canvasRef"
+      class="absolute inset-0 size-full"
+    />
   </div>
 </template>
 

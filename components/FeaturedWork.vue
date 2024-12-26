@@ -4,7 +4,8 @@
       <div
         v-for="work in workList"
         :key="work.name"
-        class="flex items-end justify-between space-x-2">
+        class="flex items-end justify-between space-x-2"
+      >
         <ProjectListItem :work-data="work" />
       </div>
       <div class="flex justify-center">
@@ -13,7 +14,8 @@
           label="All Projects"
           variant="ghost"
           icon="ph:arrow-right-light"
-          trailing />
+          trailing
+        />
       </div>
     </div>
   </div>

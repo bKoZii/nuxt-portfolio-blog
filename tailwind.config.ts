@@ -7,8 +7,8 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
+        'transparent': 'transparent',
+        'current': 'currentColor',
         'ocean-green': {
           DEFAULT: '#379777',
           50: '#C8EBE0',
@@ -23,7 +23,7 @@ export default <Partial<Config>>{
           900: '#0B1F19',
           950: '#06100D',
         },
-        secondary: {
+        'secondary': {
           DEFAULT: '#344C64',
           light: '#577B8D',
         },

@@ -1,14 +1,18 @@
 <template>
   <div>
     <div class="mb-3 flex flex-col items-center justify-between lg:flex-row">
-      <PageHeader :title="$t('blogs.title')" :description="$t('blogs.subtitle')" />
+      <PageHeader
+        :title="$t('blogs.title')"
+        :description="$t('blogs.subtitle')"
+      />
       <div class="mt-5 text-xs text-neutral-500 lg:m-0">
         <span>Powered by </span>
         <a
           href="https://strapi.io/"
           target="_blank"
           rel="noopener noreferrer"
-          class="font-bold text-indigo-700 dark:text-indigo-500">
+          class="font-bold text-indigo-700 dark:text-indigo-500"
+        >
           Strapi
         </a>
       </div>
@@ -30,15 +34,19 @@
             ? $t('blogs.withTag.searchPlaceholder', { tagName: toggledTags.toString() })
             : $t('blogs.searchPlaceholder')
         "
-        :ui="{ icon: { trailing: { pointer: '' } } }">
+        :ui="{ icon: { trailing: { pointer: '' } } }"
+      >
         <template #trailing>
-          <UKbd v-show="searchInput == ''"> F </UKbd>
+          <UKbd v-show="searchInput == ''">
+            F
+          </UKbd>
           <UButton
             v-show="searchInput !== ''"
             color="white"
             variant="ghost"
             icon="ic:baseline-close"
-            @click="searchInput = ''" />
+            @click="searchInput = ''"
+          />
         </template>
       </UInput>
     </div>
@@ -48,13 +56,22 @@
     </section>
 
     <main v-if="blogsData?.data && blogsData?.meta.pagination.total >= 1">
-      <section v-auto-animate class="flex flex-col flex-nowrap gap-3">
+      <section
+        v-auto-animate
+        class="flex flex-col flex-nowrap gap-3"
+      >
         <ClientOnly fallback-tag="div">
-          <div v-for="post in blogsData.data" :key="post.documentId">
+          <div
+            v-for="post in blogsData.data"
+            :key="post.documentId"
+          >
             <BlogIndexCard :post="post" />
           </div>
           <template #fallback>
-            <div v-for="fallback in pageSize" :key="fallback">
+            <div
+              v-for="fallback in pageSize"
+              :key="fallback"
+            >
               <LazyBlogSkeletonFallback />
             </div>
           </template>
@@ -68,7 +85,8 @@
           show-first
           show-last
           :first-button="{ icon: 'ph:arrow-arc-left', label: 'First', color: 'white' }"
-          :last-button="{ icon: 'ph:arrow-arc-right', label: 'Last', color: 'white' }" />
+          :last-button="{ icon: 'ph:arrow-arc-right', label: 'Last', color: 'white' }"
+        />
       </section>
     </main>
     <div v-else>
@@ -78,7 +96,8 @@
         :description="alertConfig.description"
         :icon="alertConfig.icon"
         :color="alertConfig.color"
-        :variant="alertConfig.variant" />
+        :variant="alertConfig.variant"
+      />
     </div>
   </div>
 </template>

@@ -1,8 +1,13 @@
 <template>
-  <h2 class="mb-2 text-2xl font-bold">Tags:</h2>
+  <h2 class="mb-2 text-2xl font-bold">
+    Tags:
+  </h2>
   <div class="mb-5 flex flex-row flex-wrap gap-1">
     <template v-if="tagItems">
-      <BlogTagsToggler :tags="tagItems.data" @toggled-tags="$emit('toggledTags', $event)" />
+      <BlogTagsToggler
+        :tags="tagItems.data"
+        @toggled-tags="$emit('toggledTags', $event)"
+      />
     </template>
   </div>
 </template>

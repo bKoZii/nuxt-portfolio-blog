@@ -29,7 +29,10 @@
     <section>
       <template v-if="tagBlogs?.meta.pagination.total ?? 0 >= 0">
         <section class="flex flex-col flex-nowrap gap-3">
-          <div v-for="tagBlogItems in tagBlogs?.data" :key="tagBlogItems.documentId">
+          <div
+            v-for="tagBlogItems in tagBlogs?.data"
+            :key="tagBlogItems.documentId"
+          >
             <BlogIndexCard :post="tagBlogItems" />
           </div>
         </section>
@@ -44,7 +47,10 @@
         />
       </div>
     </section>
-    <section v-if="tagBlogs?.meta.pagination.total" class="mt-5 flex justify-center">
+    <section
+      v-if="tagBlogs?.meta.pagination.total"
+      class="mt-5 flex justify-center"
+    >
       <UPagination
         v-model="currentPage"
         :total="tagBlogs.meta.pagination.total"
@@ -95,7 +101,6 @@ const constructSearchFilters = (searchInput: string) => {
   return { $and: filters }
 }
 const { data: tagBlogs } = useNuxtData<Strapi5ResponseMany<StrapiBlogs>>('tagBlogs')
-const nuxt = useNuxtApp()
 const { refresh } = await useAsyncData(
   'tagBlogs',
   () =>

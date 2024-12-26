@@ -4,9 +4,16 @@
       v-model="toggledTags"
       type="multiple"
       class="flex gap-1 rounded-lg shadow-sm"
-      @update:model-value="$emit('toggledTags', toggledTags)">
-      <div v-for="tags in $props.tags" :key="tags.documentId">
-        <ToggleGroupItem :value="tags.name" :as-child="true">
+      @update:model-value="$emit('toggledTags', toggledTags)"
+    >
+      <div
+        v-for="tagItem in $props.tags"
+        :key="tagItem.documentId"
+      >
+        <ToggleGroupItem
+          :value="tagItem.name"
+          :as-child="true"
+        >
           <UBadge
             variant="subtle"
             :ui="{
@@ -15,8 +22,9 @@
                 subtle: 'hover:bg-primary-500 dark:hover:bg-primary-800 hover:text-white',
               },
             }"
-            color="primary">
-            {{ tags.name }}
+            color="primary"
+          >
+            {{ tagItem.name }}
           </UBadge>
         </ToggleGroupItem>
       </div>
@@ -32,6 +40,6 @@ defineProps<{
   tags: tagsItem[]
 }>()
 
-const emit = defineEmits(['toggledTags'])
+defineEmits(['toggledTags'])
 const toggledTags = ref([])
 </script>

@@ -2,7 +2,6 @@
 import wasm from '@rollup/plugin-wasm'
 
 export default defineNuxtConfig({
-
   modules: [
     'nuxt-typed-router',
     '@nuxtjs/google-fonts',
@@ -44,7 +43,9 @@ export default defineNuxtConfig({
       },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      link: [{ rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' }],
+      link: [
+        { rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
+      ],
     },
   },
   site: {
@@ -96,6 +97,15 @@ export default defineNuxtConfig({
     locales: ['th', 'en'],
     defaultLocale: 'th',
     plugins: ['timezone', 'localeData'],
+  },
+  eslint: {
+    config: {
+      stylistic: {
+        jsx: false,
+        braceStyle: '1tbs',
+        arrowParens: true,
+      },
+    },
   },
   googleFonts: {
     families: {
@@ -151,7 +161,13 @@ export default defineNuxtConfig({
     },
     clientBundle: {
       includeCustomCollections: true,
-      icons: ['ph:monitor-duotone', 'ph:sun-duotone', 'ph:moon-duotone', 'circle-flags:us', 'circle-flags:th'],
+      icons: [
+        'ph:monitor-duotone',
+        'ph:sun-duotone',
+        'ph:moon-duotone',
+        'circle-flags:us',
+        'circle-flags:th',
+      ],
       scan: true,
     },
   },

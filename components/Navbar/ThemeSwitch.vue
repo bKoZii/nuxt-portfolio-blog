@@ -1,7 +1,10 @@
 <template>
   <div class="inline-flex">
     <ClientOnly>
-      <UTooltip text="Switch Theme" :popper="{ strategy: 'absolute' }">
+      <UTooltip
+        text="Switch Theme"
+        :popper="{ strategy: 'absolute' }"
+      >
         <UButton
           square
           :padded="false"
@@ -10,11 +13,15 @@
           variant="soft"
           :icon="iconName"
           class="group"
-          @click="switchColorMode" />
+          @click="switchColorMode"
+        />
       </UTooltip>
 
       <template #fallback>
-        <USkeleton class="size-6" :ui="{ rounded: 'rounded-full' }" />
+        <USkeleton
+          class="size-6"
+          :ui="{ rounded: 'rounded-full' }"
+        />
       </template>
     </ClientOnly>
   </div>
