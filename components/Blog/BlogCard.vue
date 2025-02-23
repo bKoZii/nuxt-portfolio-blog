@@ -1,8 +1,7 @@
 <template>
-  <template v-if="post">
+  <template v-if="blog">
     <NuxtLink
-      :to="`/blog/${post.slug}`"
-      prefetch-on="interaction"
+      :to="$resolveRoute(`${blog.path}`)"
     >
       <UCard
         :ui="{
@@ -16,29 +15,21 @@
         }"
       >
         <div class="flex flex-row items-center gap-4 p-4 md:gap-6">
-          <NuxtImg
-            v-if="post.blogIcon"
-            :src="`${post.blogIcon.url}`"
-            width="100%"
-            class="hidden w-10 drop-shadow sm:block sm:w-16 sm:min-w-16"
-            :alt="`ไอคอนประจำโพสต์ ${post.title}`"
-            :aria-label="`ไอคอนประจำโพสต์ ${post.title}`"
-          />
           <div>
-            <h3 class="text-balance text-base font-semibold md:text-lg">
-              {{ post.title }}
-            </h3>
+            <h1 class="text-balance text-base font-semibold md:text-lg">
+              {{ blog.title }}
+            </h1>
             <p
               class="mt-1 line-clamp-2 text-balance text-xs text-neutral-600 dark:text-neutral-300"
             >
-              {{ post.subtitle }}
+              {{ blog.description }}
             </p>
             <section class="mt-4 flex flex-col flex-wrap gap-3 md:mt-2 md:flex-row">
               <div
                 class="flex flex-row flex-nowrap items-center gap-1 text-neutral-800 dark:text-neutral-300"
               >
                 <UTooltip
-                  :text="useFormatDate(post.publishedAt)"
+                  :text="useFormatDate(blog.dateCreated)"
                   :ui="{ wrapper: 'inline-flex gap-1' }"
                   :popper="{
                     arrow: true,
@@ -51,7 +42,7 @@
                     name="ph:calendar-dots-duotone"
                     class="size-4"
                   />
-                  <span class="text-xs">{{ `${useRelativeDate(post.publishedAt)}` }}</span>
+                  <span class="text-xs">{{ `${useRelativeDate(blog.dateCreated)}` }}</span>
                 </UTooltip>
               </div>
               <UDivider
@@ -59,12 +50,12 @@
                 class="hidden md:block"
               />
               <div
-                v-if="post.categories"
+                v-if="blog.tags"
                 class="flex gap-1"
               >
                 <div
-                  v-for="category in post.categories"
-                  :key="category.documentId"
+                  v-for="category in blog.tags"
+                  :key="category"
                 >
                   <UBadge
                     size="xs"
@@ -74,7 +65,7 @@
                       base: 'z-10 h-full',
                     }"
                   >
-                    {{ category.name }}
+                    {{ category }}
                   </UBadge>
                 </div>
               </div>
@@ -87,8 +78,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { StrapiBlogs } from '~/types/StrapiBlogs'
+import type { BlogCollectionItem } from '@nuxt/content'
 
-const props = defineProps<{ post: StrapiBlogs }>()
-const { post } = toRefs(props)
+defineProps<{ blog: BlogCollectionItem }>()
 </script>

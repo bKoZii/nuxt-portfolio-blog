@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import wasm from '@rollup/plugin-wasm'
 
 export default defineNuxtConfig({
   modules: [
@@ -9,18 +8,16 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     'dayjs-nuxt',
     '@stefanobartoletti/nuxt-social-share',
-    '@nuxtjs/strapi',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
-    '@nuxtjs/robots',
-    '@nuxtjs/sitemap',
+    // '@nuxtjs/robots',
+    // '@nuxtjs/sitemap',
     '@nuxt/eslint',
     '@formkit/auto-animate/nuxt',
-    '@nuxtjs/mdc',
     '@vueuse/nuxt',
-    'nuxt-shiki',
     '@vueuse/motion/nuxt',
     '@nuxtjs/i18n',
+    '@nuxt/content',
   ],
   ssr: true,
   devtools: {
@@ -48,50 +45,28 @@ export default defineNuxtConfig({
       ],
     },
   },
-  site: {
-    url: 'https://www.konkamon.live',
-    name: 'เว็บไซต์ Portfolio & Blogs ของนาย กรกมล ศรีอ่อน - สร้างด้วย Nuxt 3 + TailwindCSS.',
-  },
-  mdc: {
-    highlight: false,
-    headings: {
+  content: {
+    renderer: {
       anchorLinks: false,
     },
-    components: {
-      prose: false,
-      map: {
-        pre: 'ProsePre',
-        code: 'ProseCode',
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'one-dark-pro',
+          themes: ['one-dark-pro'],
+          langs: ['vue', 'javascript', 'typescript', 'bash'],
+        },
       },
     },
   },
-  runtimeConfig: {
-    strapiUrl: process.env.STRAPI_URL,
-    public: {
-      strapiUrl: process.env.STRAPI_URL,
-    },
-  },
 
-  routeRules: {
-    '/': { prerender: true },
-    '/blog': { isr: true },
-    '/blog/**': { isr: 900 },
-    '/api/mdc': { ssr: false },
-    '/sitemap.xml': { prerender: true },
-  },
   sourcemap: {
     server: false,
     client: true,
   },
-  experimental: {
-    externalVue: false,
-  },
-  compatibilityDate: '2024-07-04',
+  compatibilityDate: '2025-02-23',
   nitro: {
     compressPublicAssets: true,
-  },
-  vite: {
-    plugins: [wasm()],
   },
   dayjs: {
     locales: ['th', 'en'],
@@ -173,20 +148,6 @@ export default defineNuxtConfig({
   },
   pinia: {
     storesDirs: ['./stores/**'],
-  },
-  robots: {
-    sitemap: 'https://www.konkamon.live/sitemap.xml',
-    allow: ['/', '/blog/'],
-    disallow: ['/api'],
-  },
-  shiki: {
-    bundledLangs: ['javascript', 'typescript', 'vue', 'shell', 'php'],
-    bundledThemes: ['houston'],
-    defaultTheme: 'houston',
-  },
-  sitemap: {
-    sources: ['/api/sitemap/urls'],
-    excludeAppSources: ['nuxt:route-rules'],
   },
   socialShare: {
     baseUrl: 'https://www.konkamon.live/',
