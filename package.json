@@ -43,7 +43,7 @@
     "@nuxtjs/i18n": "^9.1.1",
     "@nuxtjs/mdc": "^0.13.5",
     "@nuxtjs/robots": "^4.1.11",
-    "@nuxtjs/sitemap": "6.1.4",
+    "@nuxtjs/sitemap": "7.2.6",
     "@nuxtjs/strapi": "^2.0.0",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
     "@rollup/plugin-wasm": "^6.2.2",
