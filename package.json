@@ -48,7 +48,7 @@
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
     "@rollup/plugin-wasm": "^6.2.2",
     "@types/eslint-plugin-tailwindcss": "^3.17.0",
-    "@vueuse/nuxt": "12.4.0",
+    "@vueuse/nuxt": "13.0.0",
     "dayjs": "^1.11.13",
     "dayjs-nuxt": "^2.1.11",
     "eslint": "^9.18.0",
