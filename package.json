@@ -42,7 +42,7 @@
     "@nuxt/eslint": "1.0.1",
     "@nuxt/ui": "2.21.0",
     "@nuxtjs/i18n": "^9.1.1",
-    "@nuxtjs/robots": "^4.1.11",
+    "@nuxtjs/robots": "^5.2.8",
     "@nuxtjs/sitemap": "6.1.4",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
     "@rollup/plugin-wasm": "^6.2.2",
