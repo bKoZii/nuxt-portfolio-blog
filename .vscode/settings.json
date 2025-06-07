@@ -3,7 +3,7 @@
     ["ui:\\s*{([^)]*)\\s*}", "[\"'`]([^\"'`]*).*?[\"'`]"],
     ["/\\*\\s?ui\\s?\\*/\\s*{([^;]*)}", ":\\s*[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
-  "tailwindCSS.experimental.configFile": "tailwind.config.ts",
+  "tailwindCSS.experimental.configFile": "/app/assets/css/main.css",
   "tailwindCSS.classAttributes": ["class", "className", "ngClass", "class:list", "ui"],
   "eslint.useFlatConfig": true,
   "conventionalCommits.scopes": [

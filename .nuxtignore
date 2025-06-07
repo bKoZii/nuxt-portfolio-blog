@@ -1,3 +1,16 @@
-/server/api/mdc.post.ts
-/pages/Bookmarks.vue
-/components/Bookmark
+/app/pages/Bookmarks.vue
+/app/pages/blog/*
+/app/pages/blog.vue
+# /app/pages/Projects.vue
+/app/pages/WhatIsInMyBag.vue
+
+/app/components/Bookmark
+/app/components/ContactMe.vue
+/app/components/HomeTabs.vue
+/app/components/LatestBlogs.vue
+/app/components/Blog/
+/app/components/content/
+# /app/components/PageHeader.vue
+/app/components/ParticleBackground.vue
+/app/components/SparkleBackground.vue
+/app/utils/

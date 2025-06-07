@@ -1,24 +1,22 @@
 <template>
-  <div>
-    <div class="grid grid-cols-1 gap-5 text-gray-800 sm:grid-cols-2 lg:grid-cols-3 lg:gap-0">
-      <TechnologyGridItems
-        title="Languages"
-        :technology-data="languageList"
-      />
-      <TechnologyGridItems
-        title="Frameworks"
-        :technology-data="frameworkList"
-      />
-      <TechnologyGridItems
-        title="Softwares / Services"
-        :technology-data="softwareList"
-      />
-    </div>
+  <div class="flex flex-col space-y-3">
+    <TechnologyGridItems
+      title="Languages"
+      :technology-data="languageList"
+    />
+    <TechnologyGridItems
+      title="Frameworks"
+      :technology-data="frameworkList"
+    />
+    <TechnologyGridItems
+      title="Softwares / Services"
+      :technology-data="softwareList"
+    />
   </div>
 </template>
 
 <script lang="ts" setup>
-import type FrameworkListInterface from '~/types/FrameworkListInterface'
+import type FrameworkListInterface from '~/../types/FrameworkListInterface'
 
 const languageList: FrameworkListInterface[] = [
   {
@@ -55,6 +53,10 @@ const frameworkList: FrameworkListInterface[] = [
   {
     name: 'Nuxt',
     icon: 'simple-icons:nuxtdotjs',
+  },
+  {
+    name: 'TailwindCSS',
+    icon: 'simple-icons:tailwindcss',
   },
   {
     name: 'Quasar',

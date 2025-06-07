@@ -1,0 +1,9 @@
+title: ระบบส่งเสริมการขายสำหรับร้านสปา
+description: ชิ้นงานวิจัยจบการศึกษาระดับปริญญาตรี จัดทำขึ้นเพื่อเป็นระบบส่งเสริมการขายสำหรับร้านสปา โดยมีฟีเจอร์หลักคือการจองบริการผ่าน LINE OA
+technologies:
+  - PHP
+  - Bootstrap
+  - MariaDB
+  - LINE OA
+githubURL: https://github.com/MrLuciana/devaree_project
+date: 2025-04

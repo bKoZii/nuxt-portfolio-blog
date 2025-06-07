@@ -1,29 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
 export default defineNuxtConfig({
+
   modules: [
-    'nuxt-typed-router',
-    '@nuxtjs/google-fonts',
-    '@nuxt/image',
     '@nuxt/ui',
-    'dayjs-nuxt',
-    '@stefanobartoletti/nuxt-social-share',
-    '@pinia/nuxt',
-    '@pinia-plugin-persistedstate/nuxt',
-    // '@nuxtjs/robots',
-    // '@nuxtjs/sitemap',
     '@nuxt/eslint',
-    '@formkit/auto-animate/nuxt',
-    '@vueuse/nuxt',
-    '@vueuse/motion/nuxt',
+    '@nuxt/image',
     '@nuxtjs/i18n',
+    'dayjs-nuxt',
+    '@nuxtjs/google-fonts',
     '@nuxt/content',
   ],
-  ssr: true,
-  devtools: {
-    enabled: true,
-  },
-
+  devtools: { enabled: true },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' },
@@ -45,29 +32,14 @@ export default defineNuxtConfig({
       ],
     },
   },
-  content: {
-    renderer: {
-      anchorLinks: false,
-    },
-    build: {
-      markdown: {
-        highlight: {
-          theme: 'one-dark-pro',
-          themes: ['one-dark-pro'],
-          langs: ['vue', 'javascript', 'typescript', 'bash'],
-        },
-      },
-    },
+
+  css: ['~/assets/css/main.css'],
+
+  future: {
+    compatibilityVersion: 4,
   },
 
-  sourcemap: {
-    server: false,
-    client: true,
-  },
-  compatibilityDate: '2025-02-23',
-  nitro: {
-    compressPublicAssets: true,
-  },
+  compatibilityDate: '2025-06-03',
   dayjs: {
     locales: ['th', 'en'],
     defaultLocale: 'th',
@@ -84,10 +56,10 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      'Albert Sans': {
-        wght: [400, 500, 600, 700, 800, 900],
+      'Nunito Sans': {
+        wght: [400, 500, 600, 700, 800],
       },
-      'Anuphan': {
+      'Noto Sans Thai': {
         wght: [400, 600, 700, 800],
       },
       'Fira Code': {
@@ -96,7 +68,10 @@ export default defineNuxtConfig({
     },
   },
   i18n: {
-    baseUrl: 'https://www.konkamon.live',
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
+    baseUrl: 'https://www.bkozii.com',
     strategy: 'no_prefix',
     defaultLocale: 'en',
     lazy: true,
@@ -123,37 +98,12 @@ export default defineNuxtConfig({
     vueI18n: 'i18n.config.ts',
   },
   icon: {
-    provider: 'server',
     customCollections: [
       {
         prefix: 'my-icon',
-        dir: './assets/icons',
+        dir: './app/assets/icons',
       },
     ],
-    serverBundle: {
-      remote: 'github-raw',
-      collections: ['ph', 'simple-icons', 'ic', 'mdi', 'circle-flags'],
-    },
-    clientBundle: {
-      includeCustomCollections: true,
-      icons: [
-        'ph:monitor-duotone',
-        'ph:sun-duotone',
-        'ph:moon-duotone',
-        'circle-flags:us',
-        'circle-flags:th',
-      ],
-      scan: true,
-    },
-  },
-  pinia: {
-    storesDirs: ['./stores/**'],
-  },
-  socialShare: {
-    baseUrl: 'https://www.konkamon.live/',
-  },
-  tailwindcss: {
-    cssPath: '~/assets/main.css',
-    configPath: 'tailwind.config.ts',
+    provider: 'iconify',
   },
 })

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <section class="mb-6 flex flex-row items-center justify-between">
-      <h2 class="text-lg font-bold text-gray-500 dark:text-gray-400">
+    <section class="flex flex-row justify-between items-center mb-6">
+      <h2 class="font-bold text-gray-500 dark:text-gray-400 text-lg">
         {{ $t('home.latestBlogs.title') }}
       </h2>
       <UButton
@@ -13,7 +13,6 @@
       />
     </section>
     <section
-      v-auto-animate
       class="flex flex-col flex-nowrap gap-3"
     >
       <ClientOnly>

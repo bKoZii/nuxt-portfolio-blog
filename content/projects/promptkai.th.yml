@@ -1,0 +1,8 @@
+title: 'พร้อมขาย: ระบบ POS บนมือถือ'
+description: โปรเจค Startup ที่พัฒนาระบบ POS ที่ทำงานบนมือถือได้อย่างเต็มรูปแบบ
+technologies:
+  - Python
+  - Frappe
+  - Flutter
+wip: true
+date: 2025-05

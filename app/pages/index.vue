@@ -1,11 +1,8 @@
 <template>
-  <main>
-    <div class="flex flex-col flex-nowrap gap-10">
-      <Hero />
-      <AboutMe />
-      <HomeTabs />
-      <LatestBlogs />
-    </div>
+  <main class="space-y-12">
+    <Hero />
+    <AboutMe />
+    <HomeCards />
   </main>
 </template>
 

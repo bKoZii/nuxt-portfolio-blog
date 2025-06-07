@@ -1,0 +1,9 @@
+title: Promotion System for Spa Shops
+description: This bachelor's degree research project focuses on developing a sales promotion system for a spa. The core functionality of this system is to enable seamless service bookings directly through LINE Official Account (LINE OA).
+technologies:
+  - PHP
+  - Bootstrap
+  - MariaDB
+  - LINE OA
+githubURL: https://github.com/MrLuciana/devaree_project
+date: 2025-04

@@ -11,5 +11,18 @@ export default defineContentConfig({
         dateUpdated: z.string().datetime(),
       }),
     }),
+    projects: defineCollection({
+      type: 'data',
+      source: 'projects/**.yml',
+      schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        date: z.string().date(),
+        image: z.string().optional(),
+        githubURL: z.string().url().optional(),
+        technologies: z.array(z.string()),
+        wip: z.boolean().default(false),
+      }),
+    }),
   },
 })

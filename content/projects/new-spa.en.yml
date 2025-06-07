@@ -1,0 +1,10 @@
+title: Promotion System for Spa Shops (Node.js Edition)
+description: Exactly the same as the bachelor's degree research project. but this time developed with Nest.js and Nuxt.js.
+technologies:
+  - Node.js
+  - Nest.js
+  - Nuxt.js
+  - TypeScript
+  - PostgreSQL
+wip: true
+date: 2025-06

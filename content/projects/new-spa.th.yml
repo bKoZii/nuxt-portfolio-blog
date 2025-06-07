@@ -1,0 +1,10 @@
+title: 'ระบบส่งเสริมการขายสำหรับร้านสปา (ฉบับ Node.js)'
+description: ชิ้นงานวิจัยจบการศึกษาระดับปริญญาตรีฉบับใหม่ พัฒนาด้วย Nest.js และ Nuxt.js
+technologies:
+  - Node.js
+  - Nest.js
+  - Nuxt.js
+  - TypeScript
+  - PostgreSQL
+wip: true
+date: 2025-06

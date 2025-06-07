@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+@plugin "@tailwindcss/typography";
+
+@theme static {
+  --font-sans: 'Nunito Sans', 'Noto Sans Thai', sans-serif;
+  --font-mono: 'Fira Code', 'Anuphan';
+
+  --color-myblue-50: #f1fafa;
+  --color-myblue-100: #dbf0f2;
+  --color-myblue-200: #bae2e7;
+  --color-myblue-300: #8accd5;
+  --color-myblue-400: #54aebc;
+  --color-myblue-500: #3892a2;
+  --color-myblue-600: #327888;
+  --color-myblue-700: #2e6270;
+  --color-myblue-800: #2c525e;
+  --color-myblue-900: #294550;
+  --color-myblue-950: #172d35;
+
+  /* My custom green */
+  --color-mygreen-50: #f0f9f5;
+  --color-mygreen-100: #daf1e5;
+  --color-mygreen-200: #b8e2cf;
+  --color-mygreen-300: #89ccb1;
+  --color-mygreen-400: #57b08f;
+  --color-mygreen-500: #379777;
+  --color-mygreen-600: #25765d;
+  --color-mygreen-700: #1e5e4c;
+  --color-mygreen-800: #1a4b3d;
+  --color-mygreen-900: #163e33;
+  --color-mygreen-950: #0b231d;
+}
+
+:root {
+  --ui-container: var(--container-4xl);
+}

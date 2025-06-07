@@ -1,8 +1,12 @@
 <template>
-  <article class="prose dark:prose-invert prose-sm sm:prose-base max-w-none">
-    <h2 class="text-lg font-bold text-gray-500 dark:text-gray-400">
+  <article class="dark:prose-invert max-w-none prose prose-sm sm:prose-base">
+    <h2 class="mb-0 sm:mb-0 font-bold text-lg">
       {{ $t('home.aboutMe.title') }}
     </h2>
+    <USeparator
+      color="primary"
+      size="md"
+    />
     <p>
       {{ $t('home.aboutMe.introduction') }}
     </p>
