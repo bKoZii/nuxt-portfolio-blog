@@ -22,7 +22,7 @@
     "@nuxthub/core": "0.9.0",
     "@nuxtjs/i18n": "9.5.5",
     "@vueuse/core": "13.4.0",
-    "motion-v": "1.3.0",
+    "motion-v": "1.5.0",
     "nuxt": "^3.17.5"
   },
   "devDependencies": {
