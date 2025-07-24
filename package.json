@@ -14,7 +14,7 @@
   "dependencies": {
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/lucide": "1.2.55",
-    "@iconify-json/simple-icons": "1.2.41",
+    "@iconify-json/simple-icons": "1.2.44",
     "@iconify-json/solar": "^1.2.2",
     "@nuxt/content": "3.5.1",
     "@nuxt/image": "^1.10.0",
